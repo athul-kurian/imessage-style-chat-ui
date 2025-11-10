@@ -24,7 +24,6 @@ struct MessageField: View {
                 TextField("iMessage", text: $typedMessage, axis: .vertical)
                     .padding(.horizontal)
                     .padding(.bottom, geometry.size.height * .textFieldBottomPaddingScalingFactor)
-                
                 Button {
                     let timestamp = Date()
                     let messageText = typedMessage.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -34,10 +33,12 @@ struct MessageField: View {
                     }
                 } label: {
                     Image(systemName: "arrow.up.circle.fill")
-                        .foregroundStyle(Color.blue)
+                        .foregroundStyle(.blue)
                         .font(.title)
-                        .background(Circle()
-                            .foregroundStyle(.white)
+                        .background(
+                            Image(systemName: "circle.fill")
+                                .foregroundStyle(.white)
+                                .font(.title)
                         )
                 }
             }.padding(geometry.size.height * .messageFieldInnerPaddingScalingFactor)
@@ -50,9 +51,3 @@ struct MessageField: View {
             .padding(.horizontal, geometry.size.width * .messageFieldHorizontalPaddingScalingFactor)
     }
 }
-
-//#Preview {
-//    MessageField(chatViewModel: ChatViewModel())
-//        //.border(.red)
-//        .padding()
-//}

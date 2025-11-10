@@ -21,7 +21,7 @@ struct ChatHeader: View {
         .padding(.top, 45)
         .padding(.bottom, 8)
         .frame(maxWidth: .infinity)
-        .background(.thinMaterial)
+        .background(.bar)
         .ignoresSafeArea(edges: .top)
     }
 }

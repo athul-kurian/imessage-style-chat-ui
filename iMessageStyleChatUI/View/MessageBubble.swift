@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MessageBubble: View {
     @Environment(\.colorScheme) var colorScheme
-    
+  
     var isUserMessage: Bool
     var content: contentType
     var dateTime: (date: String, time: String)
@@ -85,8 +85,8 @@ struct MessageBubble: View {
         Image(imageFileName)
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .frame(width: geometry.size.width * .imageFrameWidthScalingFactor, alignment: isUserMessage ? .trailing : .leading)
             .clipShape(RoundedRectangle(cornerRadius: .textBubbleCornerRadius))
-            .frame(maxWidth: geometry.size.width * .imageFrameMaxWidthScalingFactor, alignment: isUserMessage ? .trailing : .leading)
             .padding(isUserMessage ? .trailing : .leading, geometry.size.width * .messagePaddingScalingFactor)
     }
 }

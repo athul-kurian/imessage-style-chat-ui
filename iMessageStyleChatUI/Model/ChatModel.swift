@@ -13,7 +13,7 @@ struct ChatModel {
     mutating func appendMessage(content: contentType, timestamp: Date) {
         let userMessage = Message(isUserMessage: true, content: content, timestamp: timestamp)
         allMessages.append(userMessage)
-        //fetchReply()
+        fetchReply()
     }
     
     private mutating func fetchReply() {

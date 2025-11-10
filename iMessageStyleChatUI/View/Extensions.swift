@@ -14,12 +14,16 @@ extension Color {
 }
 
 extension CGFloat {
+    //Chat View
+    static let chatViewTopSpacing = 0.09
+    
+    
     //Message Bubble
     static let textBubbleCornerRadius: CGFloat = 25
     static let imageCornerRadius: CGFloat = 20
     static let messagePaddingScalingFactor: CGFloat = 0.0125
     static let textVerticalPaddingScalingFactor: CGFloat = 0.01
-    static let imageFrameMaxWidthScalingFactor: CGFloat = 0.65
+    static let imageFrameWidthScalingFactor: CGFloat = 0.65
     static let textBubbleMaxWidthScalingFactor: CGFloat = 0.72
     
     //Message Field
@@ -33,5 +37,5 @@ extension CGFloat {
 
 extension Double {
     //Message Field
-    static let messageFieldPlusButtonOpacity: CGFloat = 0.25
+    static let messageFieldPlusButtonOpacity = 0.25
 }
